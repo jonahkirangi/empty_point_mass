@@ -46,7 +46,7 @@ $(function() {
 
   var points = [];
 
-  for (var i = 0; i < 100; i++){
+  for (var i = 0; i < 1000; i++){
     var point = new Point(Math.random() * canvas.width, Math.random() * canvas.height);
     point.forces.push(new Force(Math.random() - 0.5, Math.random() - 0.5, 1));
     points.push(point);
