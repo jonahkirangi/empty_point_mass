@@ -46,8 +46,11 @@ $(function() {
 
   var points = [];
 
-  points.push(new Point(50,100));
-  points.push(new Point(25,100));
+  for (var i = 0; i < 100; i++){
+    var point = new Point(Math.random() * canvas.width, Math.random() * canvas.height);
+    point.forces.push(new Force(Math.random() - 0.5, Math.random() - 0.5, 1));
+    points.push(point);
+  }
 
   function drawScreen(){
     context.fillStyle = '#000';
